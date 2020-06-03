@@ -12,12 +12,18 @@ $age=$_POST["age"];         //recupération de l'age
 
 
 //Definition du status
-if ($age>=18){
-    $status="majeur";   
+if ($age<=12){
+    $status = "enfant";   
 }
-else{
-    $status="mineur";   
+elseif($age < 18){
+    $status = "ado";
+}
+elseif($age<70){
+    $status = "adulte";
+}
+else {
+    $status = "vieux";   
 }
 
 
-echo "Bonjour $prenom $nom.<br>Vous êtes $status.";
+echo "Bonjour $prenom $nom.<br>Vous êtes un $status.";
