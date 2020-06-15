@@ -2,7 +2,17 @@
 
 for($nbmout=0; $nbmout<=20; $nbmout++){
     
-    echo "$nbmout moutons";
+    if($nbmout<2){
+        $pluriel='';   
+    }
+    else{
+        $pluriel='s';   
+    }
+    
+   
+    
+    echo "$nbmout mounton$pluriel<br>";
+    
 }
 
 
